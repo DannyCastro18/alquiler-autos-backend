@@ -1,0 +1,32 @@
+[
+  {
+    "nombre": "Juan Pérez",
+    "correo": "juan.perez@example.com",
+    "numeroLicencia": "ABC123456",
+    "password": "securePass123"
+  },
+  {
+    "nombre": "María González",
+    "correo": "maria.gonzalez@example.com",
+    "numeroLicencia": "DEF654321",
+    "password": "mariaStrong456"
+  },
+  {
+    "nombre": "Carlos Martínez",
+    "correo": "carlos.martinez@example.com",
+    "numeroLicencia": "GHI789012",
+    "password": "carlosSecure789"
+  },
+  {
+    "nombre": "Ana López",
+    "correo": "ana.lopez@example.com",
+    "numeroLicencia": "JKL345678",
+    "password": "anaSafePass321"
+  },
+  {
+    "nombre": "Sofía Ramírez",
+    "correo": "sofia.ramirez@example.com",
+    "numeroLicencia": "MNO901234",
+    "password": "sofiaPassword987"
+  }
+]
