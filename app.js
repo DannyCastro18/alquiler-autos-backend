@@ -15,5 +15,5 @@ app.use('/api', alquilerRoutes)
 app.use('/api', clienteRoutes)
 
 app.listen(PORT, () => {
-    console.log(`Todo bien en el puerto ${PORT}`)
+    console.log(`Corriendo en puerto: ${PORT}`)
 })
