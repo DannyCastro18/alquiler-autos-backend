@@ -2,18 +2,28 @@
 
 require('dotenv').config()
 const express = require('express')
+const cors = require('cors');
+
 const app = express()
 const PORT = process.env.PORT || 3000
+
+app.use(cors({
+    origin: '*', 
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+  }));
+
+app.use(express.json())
+
 const autosRoutes = require('./routes/autosRoutes')
 const alquilerRoutes = require('./routes/alquilerRoutes')
 const clienteRoutes = require('./routes/clienteRoutes')
-
-app.use(express.json())
 
 app.use('/api', autosRoutes)
 app.use('/api', alquilerRoutes)
 app.use('/api', clienteRoutes)
 
+
 app.listen(PORT, () => {
-    console.log(`Corriendo en puerto: ${PORT}`)
+    console.log(`Servidor corriendo en el puerto: ${PORT}`)
 })
