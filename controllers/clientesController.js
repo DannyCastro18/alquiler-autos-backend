@@ -25,29 +25,6 @@ const login = async (req, res) => {
   }
 };
 
-const crearCliente = async (req, res) => {
-  try {
-    const { nombre, correo, numeroLicencia } = req.body;
-
-    const clienteExistente = await Cliente.findOne({ where: { correo } });
-
-    if (clienteExistente) {
-      return res.status(400).json({ error: "El correo ya está registrado" });
-    }
-
-    const nuevoCliente = await Cliente.create({
-      nombre,
-      correo,
-      numeroLicencia,
-    });
-    console.log(nuevoCliente);
-
-    res.json({ cliente: nuevoCliente });
-  } catch (e) {
-    res.status(500).json({ error: e.message });
-  }
-};
-
 const mostrarClientes = async (req, res) => {
   try {
     const clientes = await Cliente.findAll();
@@ -75,4 +52,4 @@ const registrarCliente = async (req, res) => {
     res.status(500).json({ error: "Error al registrar el cliente" });
   }
 };
-module.exports = { crearCliente, mostrarClientes, registrarCliente, login };
+module.exports = { mostrarClientes, registrarCliente, login };
