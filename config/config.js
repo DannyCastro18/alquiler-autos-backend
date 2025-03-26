@@ -5,7 +5,7 @@ module.exports = {
     use_env_variable: 'DATABASE_URL',
     dialect: 'postgres',
     dialectOptions: {
-      connectTimeout: 5000,
+      connectTimeout: 10000,
       ssl: {
         require: true,
         rejectUnauthorized: false, 
